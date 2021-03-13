@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ionic-designs": {
+      "hosting": {
+        "demo": [
+          "ionic-designs"
+        ]
+      }
+    }
+  }
+}

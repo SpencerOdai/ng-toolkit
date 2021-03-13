@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@ng-toolkit/datatable": [
+        "dist/ng-toolkit/datatable/ng-toolkit-datatable",
+        "dist/ng-toolkit/datatable"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

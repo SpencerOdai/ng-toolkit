@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Datatable } from './datatable.component';
+
+
+describe('Datatable', () => {
+  let component: Datatable;
+  let fixture: ComponentFixture<Datatable>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ Datatable ]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(Datatable);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
