@@ -1,0 +1,25 @@
+<nav>
+  <ul class="pagination mb-0 {{classes?.join(' ')}}">
+    <li class="page-item" (click)="prev()" [ngClass]="{'disabled':!hasPrev}"><a class="page-link">Previous</a></li>
+
+    <li class="page-item" (click)="setPage(first)" [ngClass]="{'active':isCurrent(first)}"><a class="page-link">{{first}}</a></li>
+
+    <li class="page-item" *ngIf="last > 6 && moreThan3FromFirst"><a class="page-link">...</a></li>
+
+    <ng-container *ngFor="let pageNumber of pagesNoBounds">
+      <li
+        *ngIf="showPageNumber(pageNumber)"
+        class="page-item"
+        (click)="setPage(pageNumber)"
+        [ngClass]="{'active font-weight-bold': isCurrent(pageNumber)}">
+      <a class="page-link" href="#">{{pageNumber}}</a>
+    </li>
+    </ng-container>
+
+    <li class="page-item" *ngIf="last > 6 && moreThan3FromLast"><a class="page-link">...</a></li>
+
+    <li class="page-item" *ngIf="last && first !== last" (click)="setPage(last)" [ngClass]="{'active': isCurrent(last)}"><a class="page-link">{{last}}</a></li>
+
+    <li class="page-item" (click)="next()" [ngClass]="{'disabled':!hasNext}"><a class="page-link">Next</a></li>
+  </ul>
+</nav>

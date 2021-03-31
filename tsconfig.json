@@ -3,15 +3,23 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@ng-toolkit/datatable": [
-        "dist/ng-toolkit/datatable/ng-toolkit-datatable",
-        "dist/ng-toolkit/datatable"
+      "@ngx-toolkit/datatable": [
+        "dist/ngx-toolkit/datatable/ngx-toolkit-datatable",
+        "dist/ngx-toolkit/datatable"
+      ],
+      "@ngx-toolkit/paginator": [
+        "dist/ngx-toolkit/paginator/ngx-toolkit-paginator",
+        "dist/ngx-toolkit/paginator"
+      ],
+      "shared": [
+        "dist/shared/shared",
+        "dist/shared"
       ]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
