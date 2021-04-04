@@ -16,6 +16,11 @@
             <span [ngClass]="selectedClass(item)"></span>
           </div>
         </th>
+        <th *ngIf="config?.actions.length > 0">
+          <div class="d-flex align-items-center text-capitalize" role="button">
+            Actions
+          </div>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -31,6 +36,12 @@
         <td *ngFor="let prop of headings">
           <div class="text-truncate" [innerHTML]="getProp(item, prop)"></div>
         </td>
+        <td *ngIf="config?.actions?.length > 0">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="text-truncate" *ngFor="let actions of config?.actions" [innerHTML]="actions.text"
+              (click)="actions.event"></div>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -38,13 +49,11 @@
 
 <div class="d-flex justify-content-between align-items-center">
 
-  <p class="m-0" *ngIf="pagination?.maxPageSize < data?.length">Showing {{sliceStart + 1}} to {{sliceEnd}} of {{data?.length}}</p>
+  <p class="m-0" *ngIf="pagination?.maxPageSize < data?.length">Showing {{sliceStart + 1}} to {{sliceEnd}} of
+    {{data?.length}}</p>
 
   <ng-container *ngIf="pagination?.maxPageSize < data?.length">
-    <ngx-tk-paginator
-      [page]="currentPage"
-      [maxPageSize]="pagination?.maxPageSize"
-      (pageChange)="pageChange($event)"
+    <ngx-tk-paginator [page]="currentPage" [maxPageSize]="pagination?.maxPageSize" (pageChange)="pageChange($event)"
       [total]="data?.length">
     </ngx-tk-paginator>
   </ng-container>

@@ -11,6 +11,10 @@
         "dist/ngx-toolkit/paginator/ngx-toolkit-paginator",
         "dist/ngx-toolkit/paginator"
       ],
+      "dialog": [
+        "dist/dialog/dialog",
+        "dist/dialog"
+      ],
       "shared": [
         "dist/shared/shared",
         "dist/shared"
