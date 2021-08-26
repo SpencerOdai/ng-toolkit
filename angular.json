@@ -3,38 +3,158 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@ng-toolkit/datatable": {
+    "@ngx-toolkit/datatable": {
       "projectType": "library",
-      "root": "projects/ng-toolkit/datatable",
-      "sourceRoot": "projects/ng-toolkit/datatable/src",
-      "prefix": "lib",
+      "root": "projects/ngx-toolkit/datatable",
+      "sourceRoot": "projects/ngx-toolkit/datatable/src",
+      "prefix": "ngx-tk",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-toolkit/datatable/tsconfig.lib.json",
-            "project": "projects/ng-toolkit/datatable/ng-package.json"
+            "tsConfig": "projects/ngx-toolkit/datatable/tsconfig.lib.json",
+            "project": "projects/ngx-toolkit/datatable/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-toolkit/datatable/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-toolkit/datatable/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-toolkit/datatable/src/test.ts",
-            "tsConfig": "projects/ng-toolkit/datatable/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-toolkit/datatable/karma.conf.js"
+            "main": "projects/ngx-toolkit/datatable/src/test.ts",
+            "tsConfig": "projects/ngx-toolkit/datatable/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-toolkit/datatable/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-toolkit/datatable/tsconfig.lib.json",
-              "projects/ng-toolkit/datatable/tsconfig.spec.json"
+              "projects/ngx-toolkit/datatable/tsconfig.lib.json",
+              "projects/ngx-toolkit/datatable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-toolkit/shared": {
+      "projectType": "library",
+      "root": "projects/ngx-toolkit/shared",
+      "sourceRoot": "projects/ngx-toolkit/shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-toolkit/shared/tsconfig.lib.json",
+            "project": "projects/ngx-toolkit/shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-toolkit/shared/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-toolkit/shared/src/test.ts",
+            "tsConfig": "projects/ngx-toolkit/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-toolkit/shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-toolkit/shared/tsconfig.lib.json",
+              "projects/ngx-toolkit/shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-toolkit/paginator": {
+      "projectType": "library",
+      "root": "projects/ngx-toolkit/paginator",
+      "sourceRoot": "projects/ngx-toolkit/paginator/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-toolkit/paginator/tsconfig.lib.json",
+            "project": "projects/ngx-toolkit/paginator/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-toolkit/paginator/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-toolkit/paginator/src/test.ts",
+            "tsConfig": "projects/ngx-toolkit/paginator/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-toolkit/paginator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-toolkit/paginator/tsconfig.lib.json",
+              "projects/ngx-toolkit/paginator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-toolkit/dialog": {
+      "projectType": "library",
+      "root": "projects/ngx-toolkit/dialog",
+      "sourceRoot": "projects/ngx-toolkit/dialog/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-toolkit/dialog/tsconfig.lib.json",
+            "project": "projects/ngx-toolkit/dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-toolkit/dialog/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-toolkit/dialog/src/test.ts",
+            "tsConfig": "projects/ngx-toolkit/dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-toolkit/dialog/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-toolkit/dialog/tsconfig.lib.json",
+              "projects/ngx-toolkit/dialog/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

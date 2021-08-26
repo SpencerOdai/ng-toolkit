@@ -3,9 +3,12 @@
     "ionic-designs": {
       "hosting": {
         "demo": [
-          "ionic-designs"
+          "ngx-toolkit"
         ]
       }
     }
+  },
+  "projects": {
+    "default": "ionic-designs"
   }
 }
