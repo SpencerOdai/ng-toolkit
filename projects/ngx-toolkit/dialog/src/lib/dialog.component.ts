@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-dialog',
+  selector: 'ngx-tk-dialog',
   template: `
     <p>
       dialog works!
